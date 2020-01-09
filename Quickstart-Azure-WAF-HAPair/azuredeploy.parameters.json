@@ -1,0 +1,33 @@
+{
+  "$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "adminPassword": {
+      "value": "GEN-PASSWORD"
+    },
+    "prefix": {
+      "value": "GEN-PREFIX"
+    },
+    "vNetAddressSpace": {
+      "value": "172.16.136.0/22"
+    },
+    "subnetWAF": {
+      "value": "172.16.136.0/24"
+    },
+    "subnetRed": {
+      "value": "172.16.137.0/24"
+    },
+    "dnsNameForLBIP": {
+      "value": ""
+    },
+    "subnetName": {
+      "value": "WAF"
+    },
+    "imageSKU": {
+      "value": "payg"
+    },
+    "vmSize": {
+      "value": "Standard_DS2_v2"
+    }
+  }
+}
