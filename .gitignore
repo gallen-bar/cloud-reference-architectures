@@ -3,3 +3,5 @@
 ################################################################################
 
 *.sqlite
+/.vs/cloud-reference-architectures/v16
+/.vs/cloud-reference-architectures/config

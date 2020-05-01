@@ -71,7 +71,7 @@
     }
   },
   "variables": {
-    "numberOfInstances": "2",
+    "numberOfInstances": 2,
     "computeApiVersion": "2017-03-30",
     "networkApiVersion": "2017-08-01",
     "imagePublisher": "barracudanetworks",
@@ -203,7 +203,7 @@
             }
           },
           {
-            "name": "Allow Inbound Management",
+            "name": "AllowInboundMGMT",
             "properties": {
               "description": "Allow Inbound Management",
               "protocol": "tcp",
@@ -217,7 +217,7 @@
             }
           },
           {
-            "name": "AllowInboundSecureManagement",
+            "name": "AllowInboundSecMGMT",
             "properties": {
               "description": "Allow Inbound Secure Management",
               "protocol": "tcp",
@@ -398,7 +398,7 @@
       "copy": {
         "name": "lbSecureMGMTLoop",
         "count": "[variables('numberOfInstances')]"
-      },
+      },D
       "properties": {
         "frontendIPConfiguration": {
           "id": "[variables('frontEndIPConfigID')]"
