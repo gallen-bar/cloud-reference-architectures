@@ -73,10 +73,10 @@ To deploy via Azure Cloud Shell you can connect to the Azure Cloud Shell via [ht
 
 ## Next Steps
 
-Administration of the Barracuda WAF appliance is typically done by the Web GUI. Each WAF has it’s own WEB UI and you can access each WAF via the Load Balancers FQDN or Public IP.
+Administration of the Barracuda WAF appliance is typically done by the Web GUI. Each WAF has itï¿½s own WEB UI and you can access each WAF via the Load Balancers FQDN or Public IP.
 
-WAF1   https://fqdn:8443 
-WAF2  https://fqdn:8444
+WAF1   https://fqdn:8444
+WAF2  https://fqdn:8445
 
 If you have deployed using BYOL license types you will need to access the units on their unsecure management ports and apply a license before you can access the secure management and complete any setup. 
 WAF 1: http://fqdn:8001
@@ -93,7 +93,7 @@ Note: The username to login to the appliance is admin and the password is the on
 - Create a service to serve a site via the WAF
 
 
-Under the Basic tab, click on Services. 
+  - Under the Basic tab, click on Services. 
 
 ![Azure Cloud Shell Powershell Edition](images/createfirstservice.png)
 
@@ -105,11 +105,14 @@ Now when you create your service you can select the certificate.
 
 ![Azure Cloud Shell Powershell Edition](images/examplesslservice.png)
 
-Once you have created the service the website should become available via the WAF, you may need to make host file entries if your webserver expects host names to match. Please see campus for more options or reach out to azure_support@barracuda.com for assistance. 
+  - Once you have created the service the website should become available via the WAF, you may need to make host file entries if your webserver expects host names to match. Please see campus for more options or reach out to azure_support@barracuda.com for assistance. 
 
-It is also recommended you harden management access by now making the NSG rules for port 8001 & 8002 blocks. 
+*It is also recommended you harden management access by now making the NSG rules for port 8001 & 8002 blocks.*
 
-
+### Further Actions
+1. The WAF's are not automatically clustered by default, at any stage you can complete the clustering via the UI.  [Instructions](https://campus.barracuda.com/product/webapplicationfirewall/doc/4259898/how-to-set-up-a-high-availability-environment-with-two-barracuda-web-application-firewalls/)
+2. Logs from the WAF's can be exported to an external SIEM system following these steps. [Instructions](https://campus.barracuda.com/product/webapplicationfirewall/doc/4259935/how-to-export-logs-from-the-barracuda-web-application-firewall)
+3. 
 ## Template Parameters
 | Parameter Name | Description
 |---|---
