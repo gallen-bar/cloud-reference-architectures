@@ -12,7 +12,7 @@
       "defaultValue": "CUDA",
       "type": "String",
       "metadata": {
-        "description": "identifying prefix for all VM's being build. e.g WeProd would become WeProd-VM-CGF (Max 19 char, no spaces, [A-Za-z0-9]"
+        "description": "identifying prefix for all VM's being build. e.g WeProd would become WeProd-VM-WAF (Max 19 char, no spaces, [A-Za-z0-9]"
       }
     },
     "dnsNameForLBIP": {
@@ -80,7 +80,7 @@
     "nsgName": "[concat(parameters('prefix'),'-NSG')]",
     "WAFAVSetName": "[concat(variables('wafVmName'),'AV')]",
     "adminUsername": "azureuser",
-    "subnetNameWAF": "[concat(parameters('prefix'),'-SUBNET-CGF')]",
+    "subnetNameWAF": "[concat(parameters('prefix'),'-SUBNET-WAF')]",
     "subnetRefWAF": "[concat(variables('vnetID'),'/subnets/',variables('subnetNameWAF'))]",
     "subnetNameRed": "[concat(parameters('prefix'),'-SUBNET-RED')]",
     "loadBalancerName": "[concat(variables('wafVmName'),'LB')]",
