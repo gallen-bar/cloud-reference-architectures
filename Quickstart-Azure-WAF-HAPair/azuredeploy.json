@@ -89,13 +89,12 @@
     "publicIPAddressType": "Static",
     "vNetName": "[concat(parameters('prefix'),'-VNET')]",
     "vNetID": "[resourceId('Microsoft.Network/virtualNetworks',variables('vNetName'))]",
-    "subnetRefRed": "[concat(variables('vnetID'),'/subnets/',variables('subnetNameRed'))]",
     "lbID": "[resourceId('Microsoft.Network/loadBalancers',variables('loadBalancerName'))]",
     "PublicIPID": "[resourceId('Microsoft.Network/publicIPAddresses',variables('publicIPAddressName'))]",
     "frontEndIPConfigID": "[concat(variables('lbID'),'/frontendIPConfigurations/loadBalancerFrontend')]",
     "lbPoolID": "[concat(variables('lbID'),'/backendAddressPools/loadBalancerBackend')]",
-    "lbhttpProbeID": "[concat(variables('lbID'),'/probes/httpProbe')]",
-    "lbhttpsProbeID": "[concat(variables('lbID'),'/probes/httpsProbe')]"
+    "lbhttpProbeID": "[concat(variables('lbID'),'/probes/httpProbe')]"
+    
   },
   "resources": [
     {
@@ -398,7 +397,7 @@
       "copy": {
         "name": "lbSecureMGMTLoop",
         "count": "[variables('numberOfInstances')]"
-      },D
+      },
       "properties": {
         "frontendIPConfiguration": {
           "id": "[variables('frontEndIPConfigID')]"

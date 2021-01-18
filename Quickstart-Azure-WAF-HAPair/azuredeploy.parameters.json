@@ -20,11 +20,8 @@
     "dnsNameForLBIP": {
       "value": ""
     },
-    "subnetName": {
-      "value": "WAF"
-    },
     "imageSKU": {
-      "value": "payg"
+      "value": "hourly"
     },
     "vmSize": {
       "value": "Standard_DS2_v2"
